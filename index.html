@@ -4,37 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyGame</title>
-    <link rel="stylesheet" href="newGame.css">
-    <script src="newGame.js" defer></script>
+    <link rel="stylesheet" href="new.css">
+    <script src="new.js" defer></script>
 </head>
 <body>
     <div id="outer">
         <!-- شاشة اختيار نمط اللعب -->
         <div id="mode-screen" class="screen">
             <div class="go-inner">
-                <div class="go-who" style="margin-bottom: 20px;">CHOOSE MODE</div>
+                <div class="go-who" style="margin-bottom: 25px;">CHOOSE MODE</div>
                 <button class="mode-btn" id="btn-1p">1 PLAYER (VS CPU)</button>
-                <button class="mode-btn" id="btn-2p" style="margin-top: 10px;">2 PLAYERS (VS LOCAL)</button>
+                <button class="mode-btn" id="btn-2p" style="margin-top: 12px;">2 PLAYERS (LOCAL)</button>
             </div>
         </div>
 
+        <!-- اللوحة الجانبية للنقاط -->
         <div id="stat-left" class="stat-panel">
             <div class="stat-name" style="color: #00d4ff">PLAYER 1</div>
             <div class="stat-score" id="score-p" style="color: #00d4ff; text-shadow: 0 0 20px #00d4ff">0</div>
             <div class="stat-divider"></div>
-            <div class="stat-row"><span class="stat-label">STREAK</span><span class="stat-val" id="stat-p-streak">0</span></div>
-            <div class="stat-row"><span class="stat-label">TOP SPEED</span><span class="stat-val" id="stat-p-speed">0</span></div>
+            <div class="stat-name" style="color: #ff0055; margin-top: 10px;">PLAYER 2</div>
+            <div class="stat-score" id="score-cpu" style="color: #ff0055; text-shadow: 0 0 20px #ff0055">0</div>
             <div class="stat-divider"></div>
             <div class="stat-footer">FIRST TO 7 WINS</div>
         </div>
 
+        <!-- ملخص الملعب -->
         <div id="arena">
             <canvas id="c"></canvas>
         </div>
 
+        <!-- شاشة نهاية اللعبة -->
         <div id="gameover-screen" class="screen" style="display: none;">
             <div class="go-inner">
-                <div class="go-face" id="go-face">😄</div>
+                <div class="go-face" id="go-face">🏆</div>
                 <div class="go-who" id="go-who">YOU WIN</div>
                 <div class="go-wins" id="go-wins">GAME . SET . MATCH</div>
                 <div class="go-final" id="go-final">7 - 3</div>
