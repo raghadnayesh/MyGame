@@ -9,26 +9,30 @@
 </head>
 <body>
     <div id="outer">
+        <!-- شاشة اختيار نمط اللعب -->
+        <div id="mode-screen" class="screen">
+            <div class="go-inner">
+                <div class="go-who" style="margin-bottom: 20px;">CHOOSE MODE</div>
+                <button class="mode-btn" id="btn-1p">1 PLAYER (VS CPU)</button>
+                <button class="mode-btn" id="btn-2p" style="margin-top: 10px;">2 PLAYERS (VS LOCAL)</button>
+            </div>
+        </div>
+
         <div id="stat-left" class="stat-panel">
-            <div class="stat-name" style="color: #00d4ff">YOU</div>
+            <div class="stat-name" style="color: #00d4ff">PLAYER 1</div>
             <div class="stat-score" id="score-p" style="color: #00d4ff; text-shadow: 0 0 20px #00d4ff">0</div>
             <div class="stat-divider"></div>
-            <div class="stat-row"><span class="stat-label">STREAK</span><span class="stat-val" 
-                id="stat-p-streak">0</span></div>
-            <div class="stat-row"><span class="stat-label">TOP SPEED</span><span class="stat-val"
-                id="stat-p-speed">0</span></div>
-            <div class="stat-row"><span class="stat-label">POWER HITS</span><span class="stat-val"
-                id="stat-p-power">0</span></div>
+            <div class="stat-row"><span class="stat-label">STREAK</span><span class="stat-val" id="stat-p-streak">0</span></div>
+            <div class="stat-row"><span class="stat-label">TOP SPEED</span><span class="stat-val" id="stat-p-speed">0</span></div>
             <div class="stat-divider"></div>
             <div class="stat-footer">FIRST TO 7 WINS</div>
         </div>
 
         <div id="arena">
             <canvas id="c"></canvas>
-            <div id="mute-btn"></div>
-            <div id="ui"></div>
         </div>
-        <div id="gameover-screen" class="screen">
+
+        <div id="gameover-screen" class="screen" style="display: none;">
             <div class="go-inner">
                 <div class="go-face" id="go-face">😄</div>
                 <div class="go-who" id="go-who">YOU WIN</div>
