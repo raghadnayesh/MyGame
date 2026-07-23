@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap');
+
+:root {
+    --bg: #06060c;
+    --panel: #0d111a;
+    --accent: #00d4ff;
+    --text: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rajdhani', sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container الحاوي للعبة واللوحات الجانبية */
+#outer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+}
+
+/* منطقة اللعب */
+#arena {
+    position: relative;
+    width: 760px;
+    height: 520px;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #0a0a12;
+    border-radius: 0 18px 18px 0;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.9);
+}
+
+/* -- اللوحات الجانبية Stat Panel -- */
+.stat-panel {
+    width: 150px;
+    height: 520px;
+    background: var(--panel);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px 0 0 18px;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-name {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.stat-score {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.stat-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+}
+
+.stat-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #8a8f9d;
+    margin: 6px 0;
+    font-weight: 700;
+}
+
+.stat-val {
+    color: #fff;
+}
+
+.stat-footer {
+    font-size: 10px;
+    color: #4a4e5d;
+    letter-spacing: 1px;
+}
+
+/* -- شاشة نهاية اللعبة Gameover Screen -- */
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 6, 12, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.go-inner {
+    text-align: center;
+    background: #111522;
+    padding: 30px 50px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.15);
+}
+
+.go-face {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.go-who {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--accent);
+    letter-spacing: 2px;
+}
+
+.go-wins {
+    font-size: 12px;
+    color: #6c7284;
+    letter-spacing: 3px;
+    margin: 8px 0;
+}
+
+.go-final {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+#btn-again {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#btn-again:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--accent);
+}
